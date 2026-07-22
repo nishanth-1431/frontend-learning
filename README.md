@@ -49,9 +49,9 @@
 ## 🤝 Connect
 
 <!-- Update with your actual links -->
-- **GitHub**: [your-username](https://github.com/your-username)
-- **LinkedIn**: [your-name](https://linkedin.com/in/your-name)
-- **Portfolio**: [your-portfolio.com](https://your-portfolio.com)
+- **GitHub**: [nishanth-1431](https://github.com/nishanth-1431)
+- **LinkedIn**: [Nishanth P](https://www.linkedin.com/in/nishanth-p-dev/)
+- **Portfolio**: [in progress]
 
 ---
 
