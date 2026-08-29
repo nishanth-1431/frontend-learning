@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Images — Practice</title>
+</head>
+
+<body>
+
+    <h1>HTML Images — Testing Every Concept</h1>
+
+    <hr>
+
+    <!-- Basic image with alt and dimensions -->
+    <h2>Basic Image with Alt Text and Dimensions</h2>
+    <p>Setting width and height prevents the page from jumping around while images load.</p>
+    <img
+        src="https://picsum.photos/seed/htmllearn/400/250"
+        alt="Random landscape photograph used for testing image embedding"
+        width="400"
+        height="250"
+    >
+
+    <hr>
+
+    <!-- Image with title tooltip -->
+    <h2>Image with Tooltip</h2>
+    <p>Hover over the image to see the title tooltip.</p>
+    <img
+        src="https://picsum.photos/seed/tooltip/300/200"
+        alt="A random scenic photo used to demonstrate the title attribute"
+        width="300"
+        height="200"
+        title="This tooltip appears when you hover over the image"
+    >
+
+    <hr>
+
+    <!-- Figure with figcaption -->
+    <h2>Figure with Caption</h2>
+    <p>The <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements create a semantic link between the image and its caption.</p>
+    <figure>
+        <img
+            src="https://picsum.photos/seed/architecture/500/300"
+            alt="An architectural photograph used as a placeholder for a project diagram"
+            width="500"
+            height="300"
+        >
+        <figcaption>Figure 1: Application architecture overview (placeholder image)</figcaption>
+    </figure>
+
+    <hr>
+
+    <!-- Lazy loading -->
+    <h2>Lazy Loaded Image</h2>
+    <p>This image uses <code>loading="lazy"</code>. The browser only fetches it when you scroll close to it.</p>
+    <img
+        src="https://picsum.photos/seed/lazyload/400/250"
+        alt="A landscape photo loaded lazily to demonstrate performance optimization"
+        width="400"
+        height="250"
+        loading="lazy"
+    >
+
+    <hr>
+
+    <!-- Image as a link -->
+    <h2>Image as a Clickable Link</h2>
+    <p>Wrapping an image inside an anchor tag makes it clickable.</p>
+    <a href="https://github.com/nishanth-1431" target="_blank" rel="noopener noreferrer">
+        <img
+            src="https://picsum.photos/seed/clickme/200/80"
+            alt="Click to visit Nishanth's GitHub profile"
+            width="200"
+            height="80"
+        >
+    </a>
+
+    <hr>
+
+    <!-- Responsive image with picture element -->
+    <h2>Responsive Image with &lt;picture&gt;</h2>
+    <p>Resize your browser window to see different images load at different widths.</p>
+    <picture>
+        <source media="(min-width: 800px)" srcset="https://picsum.photos/seed/large/800/400">
+        <source media="(min-width: 500px)" srcset="https://picsum.photos/seed/medium/500/250">
+        <img
+            src="https://picsum.photos/seed/small/300/150"
+            alt="A responsive image that changes based on viewport width"
+            width="300"
+            height="150"
+        >
+    </picture>
+
+    <hr>
+
+    <!-- Broken image — shows alt text fallback -->
+    <h2>Broken Image (Alt Text Fallback)</h2>
+    <p>This image has an intentionally wrong path. Notice how the alt text shows up instead of the image.</p>
+    <img src="this-file-does-not-exist.jpg" alt="This alt text appears because the image file was not found" width="300" height="200">
+
+</body>
+
+</html>
