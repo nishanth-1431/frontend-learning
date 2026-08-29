@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Links — Practice</title>
+</head>
+
+<body>
+
+    <h1>HTML Links — Trying Every Type</h1>
+
+    <hr>
+
+    <!-- External links -->
+    <h2>External Links</h2>
+    <p><a href="https://github.com/nishanth-1431" target="_blank" rel="noopener noreferrer">My GitHub Profile (new tab)</a></p>
+    <p><a href="https://www.linkedin.com/in/nishanth-p-dev/" target="_blank" rel="noopener noreferrer">My LinkedIn (new tab)</a></p>
+    <p><a href="https://stackoverflow.com" target="_blank" rel="noopener noreferrer">Stack Overflow (new tab)</a></p>
+
+    <hr>
+
+    <!-- Internal links (relative paths within the project) -->
+    <h2>Internal Links (Relative Paths)</h2>
+    <p><a href="../04-Lists/lists.html">Go to Lists example (sibling folder)</a></p>
+    <p><a href="../03-Text-Elements/text-elements.html">Go to Text Elements example</a></p>
+    <p><a href="../README.md">Go back to HTML section overview</a></p>
+
+    <hr>
+
+    <!-- Bookmark links — jumping within the page -->
+    <h2>Bookmark Links (Same Page Navigation)</h2>
+    <p>Jump to a section below:</p>
+    <ul>
+        <li><a href="#email-section">Jump to Email Links</a></li>
+        <li><a href="#phone-section">Jump to Phone Links</a></li>
+        <li><a href="#download-section">Jump to Download Links</a></li>
+        <li><a href="#takeaway">Jump to Key Takeaways</a></li>
+    </ul>
+
+    <hr>
+
+    <!-- Link with tooltip -->
+    <h2>Link with Tooltip</h2>
+    <p><a href="https://github.com/nishanth-1431" title="Opens my GitHub profile in the same tab">Hover over me to see the tooltip</a></p>
+
+    <hr>
+
+    <!-- Email links -->
+    <h2 id="email-section">Email Links</h2>
+    <p><a href="mailto:nishanth@example.com">Send me a plain email</a></p>
+    <p><a href="mailto:nishanth@example.com?subject=Portfolio Inquiry&body=Hi Nishanth, I checked out your portfolio and wanted to connect!">Email with pre-filled subject and body</a></p>
+
+    <hr>
+
+    <!-- Phone links -->
+    <h2 id="phone-section">Phone Links</h2>
+    <p><a href="tel:+919876543210">Call +91 98765 43210</a></p>
+    <p><em>(This works best on mobile devices — tapping it opens the dialer.)</em></p>
+
+    <hr>
+
+    <!-- Download link -->
+    <h2 id="download-section">Download Link</h2>
+    <p><a href="links.html" download="links-example.html">Download this HTML file</a></p>
+    <p><em>Instead of opening the file, the browser will download it.</em></p>
+
+    <hr>
+
+    <!-- Key takeaways -->
+    <h2 id="takeaway">Key Takeaways</h2>
+    <ul>
+        <li>Use descriptive link text — avoid "click here"</li>
+        <li>Always add <code>rel="noopener noreferrer"</code> with <code>target="_blank"</code></li>
+        <li>Use <code>#id</code> to create bookmark links within the same page</li>
+        <li>Relative paths for internal links, absolute paths for external ones</li>
+        <li>The <code>download</code> attribute triggers a download instead of navigation</li>
+    </ul>
+
+</body>
+
+</html>
