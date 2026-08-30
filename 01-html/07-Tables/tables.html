@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tables — Practice</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #eee;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>HTML Tables — Hands-On Practice</h1>
+
+    <hr>
+
+    <!-- Simple table -->
+    <h2>Simple Table — My Tech Stack</h2>
+    <table>
+        <tr>
+            <th>Technology</th>
+            <th>Category</th>
+            <th>Comfort Level</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Frontend</td>
+            <td>Confident</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Frontend</td>
+            <td>Learning</td>
+        </tr>
+        <tr>
+            <td>Java</td>
+            <td>Backend</td>
+            <td>Comfortable</td>
+        </tr>
+        <tr>
+            <td>Spring Boot</td>
+            <td>Backend</td>
+            <td>Getting started</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Table with sections and caption -->
+    <h2>Table with Sections and Caption</h2>
+    <table>
+        <caption>Monthly Expenses — August 2025</caption>
+        <thead>
+            <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Item</th>
+                <th scope="col">Amount (₹)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Education</td>
+                <td>Udemy Course</td>
+                <td>449</td>
+            </tr>
+            <tr>
+                <td>Tools</td>
+                <td>Domain Name</td>
+                <td>799</td>
+            </tr>
+            <tr>
+                <td>Food</td>
+                <td>Coffee &amp; Snacks</td>
+                <td>1200</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><strong>Total</strong></td>
+                <td><strong>2448</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <!-- Colspan example -->
+    <h2>Colspan — Merged Header</h2>
+    <table>
+        <tr>
+            <th colspan="3">Semester Grades — 2025</th>
+        </tr>
+        <tr>
+            <th>Subject</th>
+            <th>Internal</th>
+            <th>External</th>
+        </tr>
+        <tr>
+            <td>Data Structures</td>
+            <td>40</td>
+            <td>78</td>
+        </tr>
+        <tr>
+            <td>Operating Systems</td>
+            <td>38</td>
+            <td>65</td>
+        </tr>
+        <tr>
+            <td>Web Development</td>
+            <td>45</td>
+            <td>88</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Rowspan example -->
+    <h2>Rowspan — Grouping by Person</h2>
+    <table>
+        <tr>
+            <th>Student</th>
+            <th>Subject</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td rowspan="3">Nishanth</td>
+            <td>Java</td>
+            <td>A+</td>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td>B+</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Kavya</td>
+            <td>Python</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>React</td>
+            <td>A-</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Accessible table with scope -->
+    <h2>Weekly Study Schedule (with scope for accessibility)</h2>
+    <table>
+        <caption>My Study Plan — This Week</caption>
+        <thead>
+            <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Morning</th>
+                <th scope="col">Afternoon</th>
+                <th scope="col">Evening</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Monday</th>
+                <td>HTML Tables</td>
+                <td>HTML Forms</td>
+                <td>Practice project</td>
+            </tr>
+            <tr>
+                <th scope="row">Tuesday</th>
+                <td>Semantic HTML</td>
+                <td>Accessibility</td>
+                <td>Review notes</td>
+            </tr>
+            <tr>
+                <th scope="row">Wednesday</th>
+                <td>CSS Selectors</td>
+                <td>Box Model</td>
+                <td>Build a layout</td>
+            </tr>
+            <tr>
+                <th scope="row">Thursday</th>
+                <td>Flexbox</td>
+                <td>Grid</td>
+                <td>Mini project</td>
+            </tr>
+            <tr>
+                <th scope="row">Friday</th>
+                <td>JavaScript basics</td>
+                <td>DOM manipulation</td>
+                <td>Push to GitHub</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
