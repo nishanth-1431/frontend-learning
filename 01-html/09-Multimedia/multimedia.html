@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multimedia — Practice</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>HTML Multimedia — Hands-On Practice</h1>
+    <p>Testing out audio, video, iframe embeds, and more. Some elements need an internet connection to work.</p>
+
+    <hr>
+
+    <!-- Audio — using a free sample from a public domain source -->
+    <section>
+        <h2>Audio Player</h2>
+        <p>A basic audio player with controls. Since I don't have a local audio file, here's what the markup looks like with a placeholder source:</p>
+
+        <audio controls>
+            <source src="sample-track.mp3" type="audio/mpeg">
+            <source src="sample-track.ogg" type="audio/ogg">
+            Your browser can't play this audio. Try updating your browser.
+        </audio>
+
+        <p><em>Note: The audio won't play because the files don't exist — this is just to show the element structure. In a real project, you'd point to actual audio files.</em></p>
+
+        <h3>Audio with Loop and Muted</h3>
+        <audio controls loop muted>
+            <source src="background-music.mp3" type="audio/mpeg">
+            Audio not supported.
+        </audio>
+    </section>
+
+    <hr>
+
+    <!-- Video — using local placeholder references -->
+    <section>
+        <h2>Video Player</h2>
+        <p>A video player with controls and a poster image.</p>
+
+        <video controls width="560" height="315" poster="https://picsum.photos/seed/videoposter/560/315">
+            <source src="project-demo.mp4" type="video/mp4">
+            <source src="project-demo.webm" type="video/webm">
+            Your browser doesn't support video playback.
+        </video>
+
+        <p><em>The poster image loads from picsum.photos as a placeholder. The video source files are local references — they'd work in a real project with actual files.</em></p>
+    </section>
+
+    <hr>
+
+    <!-- iframe — YouTube embed -->
+    <section>
+        <h2>Embedding a YouTube Video with &lt;iframe&gt;</h2>
+        <p>This loads an actual YouTube video. You can get this embed code from any YouTube video by clicking Share → Embed.</p>
+
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/qz0aGYrrlhU"
+            title="YouTube — HTML Tutorial"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+    </section>
+
+    <hr>
+
+    <!-- iframe — Google Maps embed -->
+    <section>
+        <h2>Embedding Google Maps</h2>
+        <p>This shows Chennai on Google Maps. You get this embed code from Google Maps by clicking Share → Embed a map.</p>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.84916296514!2d80.04199544812498!3d13.04768825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1693297012345"
+            width="560"
+            height="350"
+            style="border: 0;"
+            allowfullscreen
+            loading="lazy"
+            title="Google Map — Chennai, Tamil Nadu"
+        ></iframe>
+    </section>
+
+    <hr>
+
+    <!-- embed and object — PDF embedding -->
+    <section>
+        <h2>Embedding a PDF with &lt;embed&gt;</h2>
+        <p>The <code>&lt;embed&gt;</code> tag can display PDFs inline. It has no fallback — if the browser can't handle it, you see nothing.</p>
+
+        <embed src="notes.pdf" type="application/pdf" width="560" height="400">
+
+        <p><em>This won't render anything since "notes.pdf" doesn't exist here. In a real project, point this to an actual PDF file.</em></p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Embedding a PDF with &lt;object&gt; (with Fallback)</h2>
+        <p>Unlike <code>&lt;embed&gt;</code>, the <code>&lt;object&gt;</code> tag lets you provide fallback content in case the browser can't display the embedded file.</p>
+
+        <object data="notes.pdf" type="application/pdf" width="560" height="400">
+            <p>Your browser can't display this PDF inline. <a href="notes.pdf">Download the PDF instead</a>.</p>
+        </object>
+    </section>
+
+</body>
+
+</html>
