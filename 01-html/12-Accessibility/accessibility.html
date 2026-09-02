@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Accessibility Demo</title>
+</head>
+
+<body>
+
+    <!-- Skip Link — Press Tab to see it -->
+    <a href="#main-content">Skip to main content</a>
+
+    <!-- Accessible Header -->
+    <header>
+        <h1>Accessibility Demo</h1>
+    </header>
+
+    <!-- Accessible Navigation with aria-label -->
+    <nav aria-label="Main navigation">
+        <a href="#semantic">Semantic HTML</a>
+        <a href="#images">Images</a>
+        <a href="#forms">Forms</a>
+        <a href="#aria">ARIA</a>
+        <a href="#keyboard">Keyboard</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Section 1: Semantic Structure -->
+        <section id="semantic">
+            <h2>1. Semantic HTML</h2>
+
+        <!-- Section 2: Accessible Images -->
+        <section id="images">
+            <h2>2. Accessible Images</h2>
+
+            <h3>Informative Image (with descriptive alt text)</h3>
+            <img
+                src="https://via.placeholder.com/300x150/3498db/ffffff?text=Informative+Image"
+                alt="A blue placeholder representing an informative image that conveys important content"
+                width="300"
+                height="150"
+            >
+
+            <h3>Decorative Image (with empty alt)</h3>
+            <img
+                src="https://via.placeholder.com/300x20/ecf0f1/ecf0f1?text=+"
+                alt=""
+                width="300"
+                height="20"
+            >
+            >
+
+            <h3>Image with Figure and Caption</h3>
+            <figure>
+                <img
+                    src="https://via.placeholder.com/300x150/27ae60/ffffff?text=Chart+Data"
+                    alt="Bar chart showing monthly sales data from January to June 2025"
+                    width="300"
+                    height="150"
+                >
+                <figcaption>Figure 1: Monthly sales data, Jan–Jun 2025</figcaption>
+            </figure>
+        </section>
+
+        <!-- Section 3: Accessible Forms -->
+        <section id="forms">
+            <h2>3. Accessible Forms</h2>
+
+            <form action="#" method="POST" novalidate>
+                <fieldset>
+                    <legend>Contact Information</legend>
+
+                    <label for="fullname">Full Name: <span aria-hidden="true">*</span></label>
+                    <input type="text" id="fullname" name="fullname" required aria-required="true">
+
+                    <label for="email">Email: <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-help email-error">
+                    <small id="email-help">We'll never share your email with anyone.</small>
+                    <div id="email-error" class="error" role="alert"></div>
+
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject">
+                        <option value="">-- Select a subject --</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Type your message here..."></textarea>
+                </fieldset>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Section 4: ARIA Examples -->
+        <section id="aria">
+            <h2>4. ARIA Attributes</h2>
+
+            <h3>aria-label (Accessible Name)</h3>
+            <button aria-label="Close dialog">✕</button>
+
+            <h3>aria-hidden (Hide from Screen Readers)</h3>
+            <p>
+                <span aria-hidden="true">🔍</span>
+                <span>Search our website</span>
+            </p>
+
+            <h3>aria-live (Dynamic Content)</h3>
+            <div aria-live="polite" id="live-region">
+                <p>No new notifications.</p>
+            </div>
+            <button type="button" onclick="document.getElementById('live-region').innerHTML='<p>You have 3 new messages!</p>'">
+                Simulate Notification
+            </button>
+
+            <h3>Status Indicator (Not Color Alone)</h3>
+            <p>
+                <span class="status-indicator status-online" aria-hidden="true"></span>
+                <strong>Online</strong> — Server is running
+            </p>
+            <p>
+                <span class="status-indicator status-offline" aria-hidden="true"></span>
+                <strong>Offline</strong> — Server is down
+            </p>
+        </section>
+
+        <!-- Section 5: Keyboard Navigation -->
+        <section id="keyboard">
+            <h2>5. Keyboard Navigation</h2>
+
+            <h3>Custom Focusable Element</h3>
+            <div tabindex="0">
+                Focusable Element
+            </div>
+
+            <h3>Expandable Content (Details/Summary)</h3>
+            <details>
+                <summary>Click or press Enter to expand</summary>
+                <p>Hidden content inside details.</p>
+            </details>
+        </section>
+
+    </main>
+
+    <!-- Accessible Footer -->
+    <footer>
+        <p>&copy; 2025 Accessibility Demo. Built with accessible HTML.</p>
+        <nav aria-label="Footer navigation">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

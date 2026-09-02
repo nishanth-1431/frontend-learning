@@ -5,31 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semantic Layout — Practice</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
-        header { background-color: #2c3e50; color: white; padding: 20px; }
-        header h1 { margin-bottom: 5px; }
-        nav { background-color: #34495e; padding: 10px 20px; }
-        nav a { color: white; text-decoration: none; margin-right: 15px; padding: 4px 8px; border-radius: 3px; }
-        nav a:hover { background-color: #2c3e50; }
-        .layout { display: flex; max-width: 1000px; margin: 20px auto; gap: 20px; padding: 0 20px; }
-        main { flex: 3; }
-        aside { flex: 1; background-color: #f5f5f5; padding: 15px; border-radius: 5px; align-self: flex-start; }
-        aside h3 { margin-bottom: 10px; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
-        aside ul { list-style: none; margin-bottom: 15px; }
-        aside li { margin-bottom: 5px; }
-        aside a { color: #3498db; text-decoration: none; }
-        article { border: 1px solid #e0e0e0; padding: 20px; margin-bottom: 20px; border-radius: 5px; background: white; }
-        article h2 { color: #2c3e50; margin-bottom: 8px; }
-        article .date { color: #888; font-size: 0.9em; margin-bottom: 12px; }
-        section h3 { color: #34495e; margin: 15px 0 8px; }
-        details { margin: 15px 0; padding: 10px; background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 5px; }
-        summary { cursor: pointer; font-weight: bold; }
-        footer { background-color: #2c3e50; color: white; padding: 20px; text-align: center; margin-top: 30px; }
-        footer nav a { margin: 0 10px; }
-        address { font-style: normal; }
-    </style>
 </head>
 
 <body>
@@ -59,29 +34,25 @@
                 <p class="date">Published on <time datetime="2025-08-28">August 28, 2025</time></p>
 
                 <section>
-                    <h3>The Problem with Div Soup</h3>
-                    <p>When I started, every element was a <code>&lt;div&gt;</code> with a class name. The code worked, but it was hard to read and impossible for screen readers to navigate properly. Switching to semantic tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;article&gt;</code> made everything cleaner.</p>
+                    <h3>Introduction</h3>
+                    <p>This is a sample paragraph demonstrating the use of a section within an article.</p>
                 </section>
 
                 <section>
-                    <h3>The Biggest Benefits I've Noticed</h3>
+                    <h3>Key Points</h3>
                     <ol>
-                        <li><strong>Readability</strong> — I can scan my own code and immediately understand the structure.</li>
-                        <li><strong>Accessibility</strong> — Screen readers can build a navigable outline of the page.</li>
-                        <li><strong>SEO</strong> — Search engines give more weight to content in meaningful tags.</li>
+                        <li>First important point goes here.</li>
+                        <li>Second important point goes here.</li>
+                        <li>Third important point goes here.</li>
                     </ol>
                 </section>
 
                 <details>
-                    <summary>Quick reference: which tag to use when?</summary>
+                    <summary>More Details</summary>
                     <ul>
-                        <li><code>&lt;header&gt;</code> — Page or section intro</li>
-                        <li><code>&lt;nav&gt;</code> — Main navigation</li>
-                        <li><code>&lt;main&gt;</code> — Core content (one per page)</li>
-                        <li><code>&lt;article&gt;</code> — Standalone content</li>
-                        <li><code>&lt;section&gt;</code> — Themed grouping</li>
-                        <li><code>&lt;aside&gt;</code> — Related side content</li>
-                        <li><code>&lt;footer&gt;</code> — Closing info</li>
+                        <li>Detail 1</li>
+                        <li>Detail 2</li>
+                        <li>Detail 3</li>
                     </ul>
                 </details>
             </article>
@@ -92,8 +63,8 @@
                 <p class="date">Published on <time datetime="2025-08-25">August 25, 2025</time></p>
 
                 <section>
-                    <h3>What I Installed</h3>
-                    <p>Getting started with Java development required a few tools. Here's what I set up on my machine:</p>
+                    <h3>Prerequisites</h3>
+                    <p>Here is a list of things you need before starting:</p>
                     <ul>
                         <li>JDK 21 (LTS) from Adoptium</li>
                         <li>IntelliJ IDEA Community Edition</li>
@@ -103,8 +74,8 @@
                 </section>
 
                 <section>
-                    <h3>First Project — Hello World</h3>
-                    <p>Classic first step. Created a simple class, compiled it, ran it. That feeling of seeing "Hello, World!" in the terminal never gets old.</p>
+                    <h3>First Step</h3>
+                    <p>This paragraph describes the first step of the process.</p>
                 </section>
 
                 <!-- Figure with caption -->
