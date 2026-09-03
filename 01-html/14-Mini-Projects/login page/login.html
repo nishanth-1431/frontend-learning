@@ -1,33 +1,91 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Login page</title>
-        <link rel="icon" href="login.png">
+<html lang="en">
 
-    </head>
-    <body>
-        <center>
-        <h1><a href="login.html">Login</a></h1>
-        <hr>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="icon" href="login.png">
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <a href="login.html">Login</a>
+        </h1>
+    </header>
+
+    <hr>
+
+    <main>
+
         <form action="#" method="POST">
+
             <fieldset>
+
+                <legend>Login</legend>
+
                 <table>
-                <tr>
-                  <td><label for="email">enter your Email      </label></td>
-                 <td><input type="text" id="email" name="email" placeholder="ends with @gmail.com" required><br></td>
-                </tr>
-                <tr>
-                <td><label for="password">enter your password </label></td>
-                <td><input type="password" id="password" name="password" placeholder="password here" required></td>
-                </tr>
-                <tr><td><small><a href="">Forgot password ?</a></small></td></tr>
-                <tr>
-                   <td colspan="2" align="center"><button>Login</button></td> 
-                </tr>
-                <tr><td colspan="2" align="center"><small>not a member? <a href="">signup</a></small></td></tr>
+
+                    <tr>
+                        <td>
+                            <label for="email">Enter your email:</label>
+                        </td>
+
+                        <td>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="password">Enter your password:</label>
+                        </td>
+
+                        <td>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <a href="#">Forgot password?</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit">Login</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <small>
+                                Not a member?
+                                <a href="#">Sign up</a>
+                            </small>
+                        </td>
+                    </tr>
+
                 </table>
+
             </fieldset>
+
         </form>
-        </center>
-    </body>
+
+    </main>
+
+</body>
+
 </html>
